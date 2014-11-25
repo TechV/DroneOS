@@ -1,9 +1,9 @@
-<h1><b>DroneOS
+<h1><b>DroneOS<p>
 =======</h1></b>
 
 An opensource Raspberry Pi OS for Drones.
 
-<b>Features:
+<b>Features:<p>
 =========</b>
 
 * WiFi controlled
@@ -20,7 +20,7 @@ An opensource Raspberry Pi OS for Drones.
 * An ongoing opensource project from Eastern Michigan University's 
   Information Assurance Program.
 
-<b>History:
+<b>History:<p>
 ========</b>
 
 <b>Who Started this project?</b>
@@ -50,7 +50,7 @@ system on here. If it is a job offer or other type of inquiry, you can email
 me directly at Ryan@TechVendetta.com, include a non spamy interesting subject
 line please. 
 
-<b>About:
+<b>About:<p>
 ======</b>
 
 The code in this repository utilizes multiple opensource technologies to
@@ -62,25 +62,25 @@ complies with the project guidelines and standards (coming soon). This is
 the second part which consists of the OS, connectivity systems, configs,
 and flight control systems.
 
-<b>The Raspberry Pi system image is built using buildroot:
+<b>The Raspberry Pi system image is built using buildroot:<p>
 =======================================================</b>
 
 To build and use the buildroot stuff, do the following:
+<p>
+<p>1) run 'make ARCH=arm menuconfig'
+<p>2) select the packages you wish to compile
+<p>3) run 'make ARCH=arm'
+<p>4) wait while it compiles
+<p>5) After compiling, you will be offered to choose a dev to dd the image to.
 
-1) run 'make ARCH=arm menuconfig'
-2) select the packages you wish to compile
-3) run 'make ARCH=arm'
-4) wait while it compiles
-5) After compiling, you will be offered to choose a dev to dd the image to.
+<p>You do not need to be root to build or run buildroot.  Have fun!
 
-You do not need to be root to build or run buildroot.  Have fun!
-
-<b>Offline build:
+<b>Offline build:<p>
 ==============</b>
 
 In order to do an offline-build (not connected to the net), fetch all
-selected source by issuing a
-$ make source
+selected source by issuing a:
+<p>$ make source
 
 before you disconnect.
 If your build-host is never connected, then you have to copy buildroot
