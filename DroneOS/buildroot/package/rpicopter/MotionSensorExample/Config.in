@@ -1,0 +1,7 @@
+config BR2_PACKAGE_RPIC_UTILS
+	bool "rpic-MotionSensorExample"
+#	select BR2_PACKAGE_BLUEZ_UTILS_COMPAT
+#	select BR2_PACKAGE_UDEV
+	help
+	  Adds MotionSensorExample package
+	  https://github.com/rpicopter/MotionSensorExample

@@ -1,0 +1,14 @@
+/output
+/dl
+/.auto.deps
+/.config.cmd
+/..config.tmp
+*.depend
+*.o
+/*.patch
+/*.diff
+*.orig
+*.rej
+/*.img
+*~
+*.pyc

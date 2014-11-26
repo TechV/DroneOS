@@ -1,0 +1,7 @@
+config BR2_PACKAGE_RPIC_BLUEZ_TOOLS
+    bool "rpic-bluez-tools"
+    depends on BR2_PACKAGE_DBUS_GLIB
+    depends on BR2_PACKAGE_READLINE
+    help
+        bluez-tools
+        https://github.com/rpicopter/bluez-tools

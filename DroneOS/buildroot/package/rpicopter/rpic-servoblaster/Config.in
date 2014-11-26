@@ -1,0 +1,5 @@
+config BR2_PACKAGE_RPIC_SERVOBLASTER
+	bool "rpic-servoblaster"
+	help
+	  Adds servoblaster
+	  https://github.com/rpicopter/ServoBlaster

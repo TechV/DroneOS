@@ -1,0 +1,5 @@
+config BR2_PACKAGE_RPIC_CONTROLLER
+	bool "rpic-controller"
+	help
+	  Adds controller package
+	  https://github.com/rpicopter/controller

@@ -1,0 +1,5 @@
+config BR2_PACKAGE_RPIC_AVRCONTROLLER
+	bool "rpic-avrcontroller"
+	help
+	  Adds avr controller package
+	  https://github.com/rpicopter/avrcontroller

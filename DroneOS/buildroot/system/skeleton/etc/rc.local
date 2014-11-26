@@ -1,0 +1,25 @@
+#!/bin/sh -e
+ifup -a > /root/wifi.log &
+
+#if [ -f "/firstboot" ]; then
+	# rm /firstboot
+passwd <<EOF
+techvendetta
+techvendetta
+techvendetta
+EOF
+dropbearkey -t rsa -f /etc/dropbear/dropbear_rsa_host_key
+echo "Installing extra pacakages......."
+bash /usr/sbin/installpackages.sh > /root/packageinstall.log
+#fi
+
+ifconfig > /root/ifconfig.log &
+#/bin/busybox udhcpd -fs /etc/udhcpd.conf > /root/udhcpd.log &
+# /usr/sbin/wpa_supplicant -Dnl80211 -iwlan0 -c/etc/wpa_supplicant.conf >> /root/wifi.log &
+dmesg > /root/dmesg.log &
+lsusb > /root/lsusb.log &
+
+cat /proc/net/wireless > /root/wifidev.log &
+echo "rc.local ran i guess" > /root/log &
+lighttpd -f /etc/lighthttpd/lighttpd.conf
+exit 0

@@ -1,0 +1,842 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<!--
+	Tessellate 1.0 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+<script type="text/javascript" language="javascript" src="lytebox.js"></script>
+
+		<link rel="stylesheet" href="lytebox.css" />
+		<title>Let's Build A Drone</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic" rel="stylesheet" type="text/css" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header" class="dark">
+				<header>
+					<h1>Welcome to the OpenDrone Manual</h1>
+					<p>This will guide you to recreating the hardware and setting up the software components. You will also find helpful tips regarding issues you may encounter during the build phase. Further updates or future changes will be posted on http://techvendetta.com</p>
+				</header>
+				<footer>
+					<br><a href="#first" class="button scrolly">Proceed to parts list.</a>
+				</footer>
+			</section>
+			
+		<!-- First -->
+			<section id="first" class="main">
+				<header>
+					<div class="container">
+						<h2>The following chart shows the parts for this build as well as suggestions regarding tweaks to this list.</h2>
+						<p>
+<table border="3" bgcolor="lightgrey" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>Part Description</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>Part Price</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p>Part Source</p>
+			</td>
+			<td style="text-align:left; width:3.2354in">
+			<p>Part Description</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>RASPBERRY-PI RPI NOIR CAMERA BOARD CAMERA BOARD, BCM2835 RASPBERRY PI</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$25.00</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.newark.com/raspberry-pi/rpi-noir-camera-board/camera-board-bcm2835-raspberry/dp/08X2023">http://www.newark.com/raspberry-pi/rpi-noir-camera-board/<br>
+camera-board-bcm2835-raspberry/dp/08X2023</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>No IR Camera, useful for night vision as well as certain other cases where infrared vision is required.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>RASPBERRY-PI RPI CAMERA BOARD ADD-ON BRD, CAMERA MODULE, RASPBERRY PI</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$25.00</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.newark.com/raspberry-pi/rpi-camera-board/add-on-brd-camera-module-raspberry/dp/69W0689">http://www.newark.com/raspberry-pi/rpi-camera-board/<br>
+add-on-brd-camera-module-raspberry/dp/69W0689</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>Standard camera module for the Pi. Uses the csi bus which helps avoid over powering the usb bus.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>RASPBERRY-PI RASPBRRY-MODB-512M MODEL B - ASSEMBLED BOARD ONLY</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$35.00</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.newark.com/raspberry-pi/raspbrry-modb-512m/model-b-assembled-board-only/dp/43W5302">http://www.newark.com/raspberry-pi/raspbrry-modb-512m/<br>
+model-b-assembled-board-only/dp/43W5302</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>The Raspberry Pi itself. This will act as the brain of the Quadrocopter and tie the other parts together.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>ADAFRUIT INDUSTRIES 1110 RGB NEGATIVE 16X2 LCD + KEYPAD KIT</p><p>***Optional***</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$24.95</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.newark.com/adafruit-industries/1110/rgb-negative-16x2-lcd-keypad-kit/dp/52W9086">http://www.newark.com/adafruit-industries/1110/<br>
+rgb-negative-16x2-lcd-keypad-kit/dp/52W9086</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This is a simple multicolor screen with various buttons. This would be useful to allow us to run calibration scripts and view system status messages.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>GPIO Ribbon Cable for Raspberry Pi</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$2.95</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.adafruit.com/products/862">http://www.adafruit.com/products/862</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>Standard GPIO ribbon cable to extend out the GPIO port. The T-Cobbler bellow includes one, but sometimes you may get a faulty cable.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>Adafruit Pi Unassembled T-Cobbler Breakout Kit for Raspberry Pi</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$6.95</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.adafruit.com/products/1105">http://www.adafruit.com/products/1105</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>The T-cobbler enables us to tap the GPIO pins out to control our ESCs and thereby, our motors. This isn't 100% necessary but really helps with the connections without damaging or cluttering the pi's pins.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>pIO - microSD Card Adaptor</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$10.00</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://quilix.com/pio">http://quilix.com/pio</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>The pIO is about half the size of a standard sd card and works as a micro sd adapter for the Pi. This cuts down weight and makes our storage fit flush with the device.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>Triple Axis Accelerometer and Gyro Breakout - MPU-6050</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$39.95</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="https://www.sparkfun.com/products/11028">https://www.sparkfun.com/products/11028</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This module has three accelerometers and a gyro all on one chip and is vital in giving us telemetry data to stabilize our flight. There are various different breakout board styles, I'll be documenting for the sparkfun version which is smaller than the others.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>Turnigy D2836/8 1100KV Brushless Outrunner Motor</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$13.16 ea<br />
+			(total 5)</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.hobbyking.com/hobbyking/store/__18969__turnigy_d2836_8_1100kv_brushless_outrunner_motor.html">http://www.hobbyking.com/hobbyking/store/<br>
+__18969__turnigy_d2836_8_1100kv_brushless_<br>outrunner_motor.html</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>These are our motors they provide between 1100 and 1110 grams of thrust depending on prop size.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>Hobbyking X525 V3 Glass Fiber Quadcopter Frame 600mm</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$14.30</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.hobbyking.com/hobbyking/store/__22800__Hobbyking_X525_V3_Glass_Fiber_Quadcopter_Frame_600mm.html">http://www.hobbyking.com/hobbyking/store/<br>
+__22800__Hobbyking_X525_V3_Glass_<br>Fiber_Quadcopter_Frame_600mm.html</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This is the base frame of the quadcopter. This model can be folded up to allow for easy transporting.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>Q Brain 4 x 25A Brushless Quadcopter ESC 2-4S 3A SBEC</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$33.43</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.hobbyking.com/hobbyking/store/__48066__Q_Brain_4_x_25A_Brushless_Quadcopter_ESC_2_4S_3A_SBEC_US_Warehouse_.html">http://www.hobbyking.com/hobbyking/store/<br>
+__48066__Q_Brain_4_x_25A_Brushless_Quadcopter<br>
+_ESC_2_4S_3A_SBEC_US_Warehouse_.html</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This is a specialized ESC setup. It contains all four ESCs which control the speed on our motors. Additionally it has a 3amp 5volt output usable by the pi.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>TURNIGY BESC Programming Card (USA Warehouse)</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$7.55</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.hobbyking.com/hobbyking/store/__33282__TURNIGY_BESC_Programming_Card_USA_Warehouse_.html">http://www.hobbyking.com/hobbyking/store/<br>
+__33282__TURNIGY_BESC_Programming_Card<br>_USA_Warehouse_.html</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This is the programing card for our ESCs. This allows us to tweak various settings of the ESC firmware.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>10X6 Propellers (Standard and Counter Rotating) (6pc) (USA warehouse)</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$3.67</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.hobbyking.com/hobbyking/store/__41718__10X6_Propellers_Standard_and_Counter_Rotating_6pc_USA_warehouse_.html">http://www.hobbyking.com/hobbyking/store/<br>
+__41718__10X6_Propellers_Standard_<br>and_Counter_Rotating_6pc_USA_warehouse_.html</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>10x6 props, 3 standard, 3 counter. One extra of each.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>1047SF Combo (1047SF &amp; R1047SF) (3 Standard &amp; 3 Counter Rotating Per Bag)</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$5.99</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.hobbyking.com/hobbyking/store/__20864__1047SF_Combo_1047SF_R1047SF_3_Standard_3_Counter_Rotating_Per_Bag_.html">http://www.hobbyking.com/hobbyking/store/<br>
+__20864__1047SF_Combo_1047SF_R1047SF_3_<br>Standard_3_Counter_Rotating_Per_Bag_.html</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>10x4.7 props, 3 standard, 3 counter. One extra of each.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p><a name="title"></a><a name="productTitle">SanDisk Ultra 32GB MicroSDHC Class 10 Memory Card Speed Up To 30MB/s With Adapter - SDSDQUA-032G-U46A</a></p>
+
+			<p><a name="productTitle"> </a></p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$19.29</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.amazon.com/SanDisk-MicroSDHC-Adapter-Frustration-Free-Packaging/dp/B009QZH7BU/ref=sr_1_1?ie=UTF8&amp;qid=1400213583&amp;sr=8-1&amp;keywords=32gb+micro+sd+class+10">http://www.amazon.com/SanDisk-MicroSDHC-Adapter<br>-Frustration-Free-Packaging/dp/
+B009QZH7BU/<br>ref=sr_1_1?ie=UTF8&amp;qid=1400213583&amp;<br>sr=8-1&amp;keywords=32gb+micro+sd+class+10</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This is our micro sd card. This holds the operating system of our quadcopter as well as stored video and data. Class 10 cards are highly recommended to ensure quick read/write times.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>Turnigy 5000mAh 2S 30C Lipo Pack</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$25.20</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.hobbyking.com/hobbyking/store/__9514__Turnigy_5000mAh_2S_30C_Lipo_Pack.html">http://www.hobbyking.com/hobbyking/store/<br>
+__9514__Turnigy_5000mAh_2S_30C_Lipo_Pack.html</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This is a 5000mAh 2s battery. This battery is 2s which means it provides less voltage. This battery may not provide enough power if your quadcopter has too many additional peripherals.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>ZIPPY Flightmax 8000mAh 4S1P 30C</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$63.32</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.hobbyking.com/hobbyking/store/__16226__ZIPPY_Flightmax_8000mAh_4S1P_30C.html">http://www.hobbyking.com/hobbyking/store/<br>
+__16226__ZIPPY_Flightmax_8000mAh_4S1P_30C.html</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This is a 8000MAh 4s battery. It provides 14.8volts.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>IMAX B6-AC Charger/Discharger 1-6 Cells (GENUINE) (US Warehouse)</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$44.99</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.hobbyking.com/hobbyking/store/uh_viewItem.asp?idProduct=30917">http://www.hobbyking.com/hobbyking/store/<br>
+uh_viewItem.asp?idProduct=30917</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This is the charger for the batteries. It has cell balancing which is important for the health and safety of our batteries. It also can charge all of the battery types used in this project.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>HobbyKing Micro UBEC 3A / 5v</p><p>***OPTIONAL***
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$4.06</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.hobbyking.com/hobbyking/store/uh_viewItem.asp?idProduct=15212">http://www.hobbyking.com/hobbyking/store/<br>
+uh_viewItem.asp?idProduct=15212</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This allows us to convert power from our battery down to the 5v range of the Pi and with 3amps we should have no issues powering the devices on the Pi. If you choose to use an ESC that doesn't have a 3A SBEC you will need this to power the pi.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>ALFA AWUS036NHA Wireless Adaptor 150Mbps</p>
+
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$28.99</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.newegg.com/Product/Product.aspx?Item=9SIA1AZ0H04689">http://www.newegg.com/Product/<br>
+Product.aspx?Item=9SIA1AZ0H04689</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This usb adapter works on the Pi and has wireless n for longer range as well as support for swappable antennas. This will be used to create the quadcopter access point.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>+9dBi 15&quot; Booster Antenna for Linksys WET11, WET54G, WMP11 PCI Card, WPS11, WMP54G, WMP54GS, WRT54GC</p>
+
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$5.49</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.amazon.com/Booster-Antenna-Linksys-WMP54GS-WRT54GC/dp/B000SEN9U6/ref=sr_1_17?s=electronics&amp;ie=UTF8&amp;qid=1400449762&amp;sr=1-17&amp;keywords=high+range+wifi+antenna">http://www.amazon.com/Booster-Antenna-Linksys-WMP54GS-WRT54GC<br>
+/dp/B000SEN9U6/ref=sr_1_17?s=electronics&amp;<br>ie=UTF8&amp;qid=1400449762&amp;sr=1-17&amp;<br>keywords=high+range+wifi+antenna</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This is an antenna for the wireless adapter which increases our range.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>Nyko Core Controller for PS3 (Color may Vary)</p>
+
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$12.19</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.amazon.com/Nyko-Core-Controller-Color-Playstation-3/dp/B003G2Z4FK/ref=sr_1_2?ie=UTF8&amp;qid=1400528291&amp;sr=8-2&amp;keywords=playstation+3+wired+controller">http://www.amazon.com/Nyko-Core-Controller-Color-Playstation-3/<br>
+dp/B003G2Z4FK/ref=sr_1_2?ie=UTF8&amp;qid=1400528291&amp;sr=8-2<br>
+&amp;keywords=playstation+3+wired+controller</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This is a wired PS3 controller. On Linux, xboxdrv gives us direct access to this controller allowing us to use it for control input.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>GlobalSat ND-100S USB GPS dongle</p>
+
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>&pound;18.99</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://www.amazon.com/GlobalSat-ND-100S-USB-GPS-Dongle/dp/B003WNHGAO/ref=pd_sim_e_8?ie=UTF8&refRID=0VY6Q5HFP01P70PHGWHF">http://www.amazon.com/GlobalSat-ND-100S-USB-GPS-Dongle/dp/<br>
+B003WNHGAO/ref=pd_sim_e_8?ie=UTF8&refRID=0VY6Q5HFP01P70PHGWHF</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This is a recommended gps usb adapter for the Pi. This can be useful to track our flight or find a lost quadcopter.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:left; width:1.4285in">
+			<p>FatShark PredatorV2 RTF FPV Headset System w/Camera and 5.8G TX</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="text-align:left; width:0.7007in">
+			<p>$279.99</p>
+			</td>
+			<td style="text-align:left; width:2.1333in">
+			<p><a href="http://hobbyking.com/hobbyking/store/__28342__fatshark_predatorv2_rtf_fpv_headset_system_w_camera_and_5_8g_tx.html">http://hobbyking.com/hobbyking/store/<br>
+__28342__fatshark_predatorv2_rtf_fpv_headset<br>_system_w_camera_and_5_8g_tx.html</a></p>
+			</td>
+			<td style="text-align:left; width:2.2354in">
+			<p>This bundle comes with a wireless headset and FPV system which allows for flight from the perspective of the quadcopter. This enables flight without direct line of sight and provides a quicker video stream. It also enables easier flight control for beginners since controls don&#39;t need to be mirrored when the quad-copter is flying towards the pilot. If you want to skip this part, you could rely on the on board streaming of the camera on the pi.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+					</div>
+				</header>
+				<div class="content dark style1 featured">
+					<div class="container">
+						<div class="row">
+							<div class="4u">
+								<section>
+									<span class="feature-icon"><span class="fa fa-clock-o"></span></span>
+									<header>
+										<h3>Build</h3>
+									</header>
+									<p>The original design during development under went a few changes as
+									I began to start considering better spacing of the components. To keep
+									the design modular, much of the parts are positioned using industrial
+									strength 20lb velcro. The Pi which acts as the brain of our drone sits
+									at the very top of the drone. Next to the Pi is the Alfa wifi module. 
+									Under these components is our battery which rests on top of a plastic
+									plate (used for cable management purposes). Under this is the top plate
+									of the frame. Between the two plates of the frame is where I stowed away
+									the breadboard I put the accelerometer/gyro breakout board onto by use
+									of the t-cobbler breakout. This keeps the accelerometer/gyro stable and
+									protected. Finally, on the underside of the bottom plate I have mounted
+									the Qbrain ESC controller.</p>
+								</section>
+							</div>
+							<div class="4u">
+								<section>
+									<span class="feature-icon"><span class="fa fa-bolt"></span></span>
+									<header>
+										<h3>Power</h3>
+									</header>
+									<p>Power is distributed from the battery via two points. The first is
+									via the balance connector on the battery. This cable plugs directly into
+									the FPV transmitter for the direct streaming camera included with the 
+									FatShark goggles. The other power connection is the red and black leads
+									which are connected directly to the power input on the Qbrain. Since the
+									Qbrain includes a 5V output we can use that to power our Pi. If you choose
+									a different ESC with no SBEC/UBEC 5V out feature, be sure to grab the 5V UBEC
+									labeled optional in the parts list.</p>
+								</section>
+							</div>
+							<div class="4u">
+								<section>
+									<span class="feature-icon"><span class="fa fa-cloud"></span></span>
+									<header>
+										<h3>Control</h3>
+									</header>
+									<p>This project aims to be open hardware and open software. There have 
+									been one or two simillar projects in the last year or two that have had
+									some success in the realm of software based control. The most notable
+									was published in The MagPi issue 19 & 20 by Andy Baker. The wiring I
+									used was designed to align with wiring used in that project since the
+									few other projects seem to base their wireing in the same way. By having
+									a pre-selected wiring orientation we will ensure that software 
+									compatibility and options will be more readily available or developeable.</p>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="12u">
+								<footer>
+									<a href="#second" class="button scrolly">Proceed to build</a>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Second -->
+			<section id="second" class="main">
+				<header>
+					<div class="container">
+						<h2>Beginning your build</h2>
+						<p>When you first recieve your parts, you will quickly notice that
+						we are are building this from scratch. The first step you want to
+						start with is the frame. You will notice that the frame comes 
+						completly disassembled with no printed instruction manual. The manual
+						is however available online as a pdf (or in this documentation below)<br><br><a target="_blank" href="frame_manual.pdf" class="lytebox button scrolly">Frame Manual</a></p>
+					</div>
+				</header>
+				<div class="content dark style2">
+					<div class="container">
+						<div class="row">
+							<div class="4u">
+								<section>
+									<h3>Building the frame</h3>
+									<p>The frame build is relatively straight forward using the pictures
+									included in the manual as a reference. To the right you can see the 
+									pictures from my build. Notice that I did not use the four white
+									plastic mounting screws in my build since I used a plastic plate to
+									create a cavity to stash the slack from the wires and the FatShark
+									transmitter. These mounting screws probably could be used to create
+									a more reliable raised deck to store wires under if you wanted to go
+									that route.</p>
+									<footer>
+										<a href="#third" class="button scrolly">Proceed to motors</a>
+									</footer>
+								</section>
+							</div>
+							<div class="8u">
+								<div class="row no-collapse">
+									<div class="6u"><a class="lytebox image fit" href="images/pic01.jpg" ><img src="images/pic01.jpg" alt="" class="image full"/></a></div>
+									<div class="6u"><a class="lytebox image fit" href="images/pic02.jpg"><img src="images/pic02.jpg" alt=""  class="image full"/></a></div>
+								</div>
+								<div class="row no-collapse">
+									<div class="6u"><a class="lytebox image fit" href="images/pic03.jpg"><img src="images/pic03.jpg" alt=""  class="image full"/></a></div>
+									<div class="6u"><a class="lytebox image fit" href="images/pic04.jpg"><img src="images/pic04.jpg" alt=""  class="image full"/></a></div>
+								</div>
+								<div class="row no-collapse">
+									<div class="6u"><a class="lytebox image fit" href="images/pic05.jpg"><img src="images/pic05.jpg" alt=""  class="image full"/></a></div>
+									<div class="6u"><a class="lytebox image fit" href="images/pic06.jpg"><img src="images/pic06.jpg" alt=""  class="image full"/></a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		<!-- Third -->
+			<section id="third" class="main">
+				<header>
+					<div class="container">
+						<h2>Installing the motors, props and ESC</h2>
+						<p>Installation of the motors is rather straight forward. The arms of the frame have mounting holes that align with the mounting holes on our motors. Make sure the wires from the motor go off to the side to prevent damage from the bolt on the arm. I chose to mount my ESC centered on the bottom of my drone. I also braided the wires of the ESC to keep things neat and reduce any interference.<br />
+						When connecting the motor leads to the ESC leads, it does'nt matter which wire goes with which color. The ESC automatically handles controlling the signals. Furthermore, when it comes time to change the spin dirrection of the motors, all you need to do is disconnect two of the wires and flip them and the ESC automatically changes the rotation.</p>
+<a class="lytebox button scrolly" href="videos/props.html" data-lyte-options="width:640 height:480 scrollbars:no">View Video</a>
+   
+					</div>
+				</header>
+				<div class="content dark style3">
+					<div class="container">
+						<div class="row">
+							<div class="4u">
+								<section>
+									<h3>Programming the ESC</h3>
+<p>We need to change a few settings on our esc before we begin wiring everything together. These options may not be entirely neccessary, but they should help us ensure proper performance. The programer card includes instructions and a connection cable to hook up the various leads for the motors. Pragramming needs to take place before wiring because we will be changing the pin order of the cables and the programmer will only work with the stock pinouts. In order to power the ESC and programing card you will need to attach one of your batteries to the ESC power inputs. You will see that during my build process I used solderless aligator clips to make these connections. Use the images to the right to guide you to set the ESC to the settings that should offer us the best responsiveness from our motors.
+									
+
+<p>In order for our hardware to align with the current software that is available for the drone, it is important that we know what our orientation will be. To determine this, fold the frame and mount the ESC on the bottom as shown using 20lb velcro stickers. You can then braid the leads and connect them to the battery.</p>
+									<footer>
+										<a href="#fourth" class="button scrolly">Proceed to Breadboard</a>
+									</footer>
+								</section>
+							</div>
+							<div class="8u">
+								<div class="row no-collapse">
+									<div class="6u"><a class="lytebox image fit" href="images/pic07.jpg" ><img src="images/pic07.jpg" alt="" class="image full"/></a></div>
+									<div class="6u"><a class="lytebox image fit" href="images/pic08.jpg"><img src="images/pic08.jpg" alt=""  class="image full"/></a></div>
+								</div>
+								<div class="row no-collapse">
+									<div class="6u"><a class="lytebox image fit" href="images/pic10.jpg"><img src="images/pic10.jpg" alt=""  class="image full"/></a></div>
+									<div class="6u"><a class="lytebox image fit" href="images/pic09.jpg"><img src="images/pic09.jpg" alt=""  class="image full"/></a></div>
+								</div>
+								<div class="row no-collapse">
+									<div class="6u"><a class="lytebox image fit" href="images/pic11.jpg"><img src="images/pic11.jpg" alt=""  class="image full"/></a></div>
+									<div class="6u"><a class="lytebox image fit" href="images/pic12.jpg"><img src="images/pic12.jpg" alt=""  class="image full"/></a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section id="fourth" class="main">
+				<header>
+					<div class="container">
+						<h2>Building the Breadboard</h2>
+						<p>This is arguably the most complicated portion of the build process. It requires soldering skills and patience. Luckily, I've figgured out most of the hard work for you such as proper pinouts, the best way to manage the space and the best way to make the connections.<br />
+						</p>
+						<p>The first step you will need to do is assemble the T-cobler component and solder the pins in. I used a breadboard to get things organized so I soldered the pins onto the MPU6050 breakout board and the T-cobler board then removed the black spacer so the components lay flush on the breadboard.</p>
+						<p>If you have never used a breadboard before, it is essentially just an easy tool to aid in prototyping when you need to make connections temporarily or want to easily be able to change connections, and layouts or swap components out.</p>
+						
+					</div>
+				</header>
+								<div class="content dark style2">
+					<div class="container">
+						<div class="row">
+							<div class="4u">
+								<section>
+									<h3>Wiring the Breadboard</h3>
+									<p>The breadboard consists of two types of sonnections; the connections for the MPU6050, and the signal leads for the motors. What makes things complicated is the fact that there are multiple different types of breakout board for the MPU6050. Some of these boards have different labeling or pins. The specific breakout board I used is the one available from sparkfun.</p>
+									<p>When it comes to choosing how to wire things it is important to note that different controller software options have different default pin mappings. Typically these mappings are easy to change. The main input for the MPU6050 is the i2c bus, which is the scl and sda pins on the T-cobler. </p>
+									<p>It is important to test all of your connections to help avoid any issues that may arrise. Initial testing can be done with a circuit tester and final testing can be done with some software scripts. demo_3d will show that the MPU6050 is working by generating a rotatable 3d model. My motor test script will then allow you to test your motors. It is important to note that different software will have the motors on different gpio pin configurations. Also, things with the pi seem to act strangely at times depending on distro. If you encounter a state where one of your gpio outputs no longer responds try moving one of the motors to a different gpio port.</p>
+									<footer>
+										<a href="#fifth" class="button scrolly">Proceed to software</a>
+									</footer>
+								</section>
+							</div>
+							<div class="8u">
+								<div class="row no-collapse">
+									<div class="6u"><a class="lytebox image fit" href="images/bb1.jpg" ><img src="images/bb1.jpg" alt="" class="image full"/></a></div>
+									<div class="6u"><a class="lytebox image fit" href="images/bb2.jpg"><img src="images/bb2.jpg" alt=""  class="image full"/></a></div>
+								</div>
+								<div class="row no-collapse">
+									<div class="6u"><a class="lytebox image fit" href="images/bb3.jpg"><img src="images/bb3.jpg" alt=""  class="image full"/></a></div>
+									<div class="6u"><a class="lytebox image fit" href="images/bb4.jpg"><img src="images/bb4.jpg" alt=""  class="image full"/></a></div>
+								</div>
+								<div class="row no-collapse">
+									<div class="6u"><a class="lytebox image fit" href="images/bb5.jpg"><img src="images/bb5.jpg" alt=""  class="image full"/></a></div>
+									<div class="6u"><a class="lytebox image fit" href="images/bb6.jpg"><img src="images/bb6.jpg" alt=""  class="image full"/></a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			
+			<section id="fifth" class="main">
+				<header>
+					<div class="container">
+						<h2>Software Control</h2>
+						<p>Since the goal of this project is open hardware and software
+						we have a couple different selections of controller software that
+						is capable of running our hardware. It is the job of the software
+						to take readings from the MPU6050 and convert them into instructions
+						for the power levels on each of the motors. Since this is the first
+						project with the goal of creating a unified hardware platform for a
+						rasberry pi powered drone, we do currently run into some issues with
+						different pins and methods of servo control accross these various
+						software controllers. Luckily, all of these options are open source
+						and allow you to hardcode in pin options.</p>
+					</div>
+				</header>			
+			<div class="content dark style1 featured">
+					<div class="container">
+						<div class="row">
+							<div class="4u">
+								<section>
+									<span class="feature-icon"><span class="fa fa-clock-o"></span></span>
+									<header>
+										<h3>Pistuffings Quadcopter</h3>
+									</header>
+									<p>This software comes from a developer named Andy Baker who was featured
+									   in The MagPi magazine for his Raspberry Pi drone. This controller is
+									   python based and is currently focused on automated flight and manual
+									   configuration of components. Also pinouts need to be changed to fit hardware.</p>
+								</section>
+							</div>
+							<div class="4u">
+								<section>
+									<span class="feature-icon"><span class="fa fa-bolt"></span></span>
+									<header>
+										<h3>Picopter</h3>
+									</header>
+									<p>This controller is the one currently in use. The original developer
+									   abandoned the fully pi controlled method in favor of avr controll.
+									   I currently maintain a fork of the old controller and have been 
+									   experimenting with adapting it to overcome the limitations of the pi.</p>
+								</section>
+							</div>
+							<div class="4u">
+								<section>
+									<span class="feature-icon"><span class="fa fa-cloud"></span></span>
+									<header>
+										<h3>Others</h3>
+									</header>
+									<p>In my research I have come accross various other controller projects,
+									   in various states. However they lacked proper documentation or relied
+									   heavily on extra hardware to control the motors. The goal is to use as
+									   little external hardware as possible.</p>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="12u">
+								<footer>
+									<a href="#contact" class="button scrolly">Proceed to contact</a>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			
+			<section id="contact" class="main">
+				<header>
+					<div class="container">
+						<h2>Want To Get In Touch With Me?</h2>
+						<p>Fill out this form to send me an email with questions, comments, job offers, and I'll try to get back to you. If you are doing a version 2.0 of this project at EMU I have some ideas on where you could take this project next.</p>
+					</div>
+				</header>
+				<div class="content style4 featured">
+					<div class="container small">
+						<form method="post" action="MAILTO:Ryan@TechVendetta.com?Subject=DroneOS" enctype="text/plain">
+							<div class="row half">
+								<div class="6u"><input type="text" class="text" name="Sender_Name" placeholder="Name" /></div>
+								<div class="6u"><input type="text" class="text" name="Sender_Email" placeholder="Email" /></div>
+							</div>
+							<div class="row half">
+								<div class="12u"><textarea name="message" placeholder="Message"></textarea></div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<ul class="actions">
+										<li><input type="submit" class="button" value="Send Message" /></li>
+										<li><input type="reset" class="button alt" value="Clear Form" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="http://twitter.com/TechVendetta" class="fa fa-twitter solo"><span>Twitter</span></a></li>
+					<!--<li><a href="#" class="fa fa-google-plus solo"><span>Google+</span></a></li>-->
+					<li><a href="https://github.com/TechV" class="fa fa-github solo"><span>GitHub</span></a></li>
+					<li><a href="https://linkedin.com/pub/ryan-scott/43/45/651/" class="fa fa-linkedin solo"><span>Linkedin</span></a></li>
+				</ul>
+				<div class="copyright">
+					<ul class="menu">
+						<li>&copy; Ryan Scott / TechVendetta. All rights reserved.</li>
+						<li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
+
+	</body>
+</html>

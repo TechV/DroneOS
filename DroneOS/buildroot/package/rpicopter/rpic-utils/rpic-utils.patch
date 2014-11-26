@@ -1,0 +1,11 @@
+Index: utils/root/etc/init.d/S02firstboot
+10a11,12
+>         echo "Installing extra pacakages......."
+>         /usr/sbin/installpackages.sh	
+15a18,23
+> 	passwd <<EOF
+> 	techvendetta
+> 	techvendetta
+> 	techvendetta
+> 	EOF
+> 	dropbearkey -t rsa -f /etc/dropbear/dropbear_rsa_host_key

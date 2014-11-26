@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.0.2.2 (Linux)">
+	<META NAME="AUTHOR" CONTENT="Teacher!  Leave those kids alone!">
+	<META NAME="CREATED" CONTENT="20140614;21240000">
+	<META NAME="CHANGEDBY" CONTENT="Ryan ">
+	<META NAME="CHANGED" CONTENT="20140724;4281100">
+	<META NAME="AppVersion" CONTENT="14.0000">
+	<META NAME="DocSecurity" CONTENT="0">
+	<META NAME="HyperlinksChanged" CONTENT="false">
+	<META NAME="LinksUpToDate" CONTENT="false">
+	<META NAME="ScaleCrop" CONTENT="false">
+	<META NAME="ShareDoc" CONTENT="false">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin-left: 1in; margin-right: 1in; margin-top: 1in; margin-bottom: 1.19in }
+		@page:first { }
+		P { margin-bottom: 0.08in; direction: ltr; color: #00000a; widows: 0; orphans: 0 }
+		P.western { font-family: "Times New Roman", serif; font-size: 10pt }
+		P.cjk { font-family: "Times New Roman"; font-size: 10pt; so-language: en-US }
+		P.ctl { font-family: "Times New Roman"; font-size: 10pt }
+		A:link { so-language: en-US }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#00000a" DIR="LTR">
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%"><BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 200%">
+Raspberry Pi Quadrocopter Proposal</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 200%">
+IA 498 – Independent Study, Summer 2014</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 200%">
+Student: Ryan Scott</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 200%">
+Professor: Samir Tout</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 200%">
+Eastern Michigan University</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 200%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%; page-break-before: always">
+<B>Overview:</B>	</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">	The
+goal of this project is to create a well documented method to create
+a stable flying platform that is controlled via a Raspberry Pi. The
+design aspect will be adaptable to multiple uses ranging from video
+surveillance, to more advanced based applications, such as network or
+radio frequency mapping. The basic platform will consist of four
+motors and four electronic speed controllers. These will be
+controlled by a Raspberry Pi which will receive sensor information
+from an accelerometer and gyroscopic sensor. These sensors allow the
+Raspberry Pi to adjust the speeds on the motors to maintain stability
+with the horizon as well as allow for ratio based adjustments for
+bearing and movement. The software level of the project will consist
+of a wireless connection for streaming of video and manual controls
+to and from the device. Control methods will be relatively easy to
+map allowing for future projects to experiment with various other
+forms of controlling and interfacing with the device. 
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">	The
+platform will be pilot-able by use of a video headset and custom
+coded implementation enabling the use of a wired PS3 controller on
+the ground. The software system will be comprised of a custom Linux
+image for the Raspberry Pi as well as a live bootable controller
+system for a laptop.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">	Another
+future application could include experiments in “war-flying”
+simulations, to investigate the potential misuse of small scale
+mobile hacking stations.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">	The
+project will in its culmination become a detailed how-to guide in
+open-source flying platforms. Documentation will include pictures and
+videos as well as helpful lessons learned along the way to help
+future enthusiasts to achieve the basics of flight more easily,
+leaving more room for more advanced projects from the growing
+community.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">	</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">The
+project will consist of a series of target goals and test cases as
+follows:</P>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">
+	Capability 1: QC is assembled and parts are tested. Test Case 1:
+	Basic control of the parts can be demonstrated.</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">
+	Capability 2: QC can hover. Test Case 2: The QC provides enough
+	thrust on each motor to get off the ground.</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">
+	Capability 3: QC can be easily calibrated. Test Case 3: Hovering can
+	now be sustained more stably and telemetry data is more accurate.</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">
+	Capability 4: QC is capable of performing maneuvers. Test Case 4: QC
+	can now rotate and move in a direction.</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">
+	Capability 5: QC is capable of fine tuned maneuvers from external
+	controls. Test Case 5: Live data from the controller can now control
+	QC movement.</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">
+	Capability 6: QC has streaming video. Test Case 6: QC can now be
+	piloted by use of controller and video feed.</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">
+	Capability 7: QC has some form of automation to procedures. Test
+	Case 7: QC can replay a command set.</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%">
+	Capability 8: QC can be built by others by following video
+	instructions. Test Case 8: Test cases 1-7 can be completed with
+	minimal issues on replicated project.</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%"><BR>
+</P>
+<P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 200%"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt"><U><B>Tentative Parts List:</B></U></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%"><IMG SRC="qc_prop_html_140ffd5.gif" ALIGN=BOTTOM></P>
+<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%"><A NAME="_GoBack"></A>
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><FONT COLOR="#800000"><U>Notes
+/ Assumptions:</U></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><FONT COLOR="#800000">Rpi
+plus on board equipment weighs roughly 800g to 1kg, minus the
+battery. </FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><FONT COLOR="#800000">Payload
+* 2 = total thrust needed to hover at half throttle / 4 = thrust
+needed per motor.</FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><FONT COLOR="#800000">This
+means with these selected motors and props, the max weight that can
+be lifted effectively is around 2.2kg.</FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><FONT COLOR="#800000">The
+ESCs don't use simonk firmware, if needed they are compatible with
+BLHeli fw.</FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><FONT COLOR="#800000"><I>The
+terms Quadrocopter, Quadcopter, Multirotor, and drone may be used
+interchangeably in this project.</I></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><FONT COLOR="#800000"><I>The
+Abbreviation “QC” will refer to QuadCopter.</I></FONT></P>
+</BODY>
+</HTML>

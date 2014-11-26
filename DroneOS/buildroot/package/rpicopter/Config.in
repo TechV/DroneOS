@@ -1,0 +1,16 @@
+config BR2_PACKAGE_RPICOPTER
+	bool "rpicopter"
+	help
+	  Adds rpicopter utils package
+          forked from
+	  https://github.com/rpicopter 
+
+if BR2_PACKAGE_RPICOPTER
+source "package/rpicopter/rpic-controller/Config.in"
+source "package/rpicopter/rpic-avrcontroller/Config.in"
+source "package/rpicopter/rpic-bluez-tools/Config.in"
+source "package/rpicopter/rpic-utils/Config.in"
+source "package/rpicopter/rpic-pigpio/Config.in"
+source "package/rpicopter/rpic-servoblaster/Config.in"
+source "package/rpicopter/rpic-qtsixa/Config.in"
+endif

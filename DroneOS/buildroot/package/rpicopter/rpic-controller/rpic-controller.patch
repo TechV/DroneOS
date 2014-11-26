@@ -1,0 +1,104 @@
+Index: controller/main.c
+@@ -20,14 +20,14 @@
+ #include "bmpsensor/interface.h"
+ #include "speedcontroller/interface.h"
+ 
+-#include <native/task.h>
+-#include <native/timer.h>
++//#include <native/task.h>
++//#include <native/timer.h>
+ 
+ #define delay_ms(a) usleep(a*1000)
+ 
+ //see speedcontroller for the mapping
+ #define MOTOR_FL 5 
+-#define MOTOR_BL 4 
++#define MOTOR_BL 6 
+ #define MOTOR_FR 1
+ #define MOTOR_BR 0 
+ 
+@@ -36,7 +36,7 @@
+ #define SELF_LANDING_THRUST 1300 //in case of receiver failure the quad will be set to the following thrust
+ 
+ static int err;
+-static RTIME t_err;
++//static RTIME t_err;
+ 
+ int ms_err = 0;
+ int rec_err = 0;
+@@ -49,19 +49,19 @@
+ int mode = 0; //0 - flight; 1 - setup yaw; 2 - setup pitch; 3 - setup roll
+ float yaw_target = 0.0f;
+ 
+-RTIME t; //start time 
++//RTIME t; //start time 
+ 
+ void log() {
+ 	static unsigned long l = 0;
+-	static RTIME t1=rt_timer_read();
+-	static RTIME t2=rt_timer_read();
++	//static RTIME t1=rt_timer_read();
++	//static RTIME t2=rt_timer_read();
+ 	static unsigned long dt;
+ 
+ 	//calculate dt - time between runs in ms
+-	t2 = rt_timer_read();
+-
+-	dt = (t2-t1)/1000000;
+-	t1 = t2;
++	//t2 = rt_timer_read();
++
++	//dt = (t2-t1)/1000000;
++	//t1 = t2;
+ 
+ 	l++;
+ 	if (l%200 == 0) { 
+@@ -173,7 +173,7 @@
+ 	//receiver error during flight
+ 	if (inflight && rec_err<0) {
+ 		if (!emergency)
+-			t_err = rt_timer_read();
++		//	t_err = rt_timer_read();
+ 
+ 		emergency = 1;
+ 		rec_close();
+@@ -184,14 +184,14 @@
+ 
+ void autoflight() {
+ 	if (emergency) { //emergency //TODO: based on altitude
+-		RTIME _t = rt_timer_read();
+-		unsigned long dt = (long)(_t-t_err)/1000000; //calculate time since error in ms;
++		//RTIME _t = rt_timer_read();
++		//unsigned long dt = (long)(_t-t_err)/1000000; //calculate time since error in ms;
+ 		
+ 		rec.yprt[0]=rec.yprt[1]=rec.yprt[2]=0.0f;//stabilize
+-		if (dt<4000) rec.yprt[3] = SELF_LANDING_THRUST; //do self landing for first 4 sec
+-		else rec.yprt[3] = 0.0f; //switch engines off after 4 sec 
+-	}
+-
++		rec.yprt[3] = SELF_LANDING_THRUST; //do self landing for first 4 sec
++		
++	}
++else rec.yprt[3] = 0.0f; //switch engines off after 4 sec 
+ }
+ 
+ void controller_stable( void *ptr ) {
+@@ -208,7 +208,7 @@
+ 		pid_setmode(&config.pid_s[i],1);
+ 	}
+ 	flush();
+-	t=rt_timer_read();
++	//t=rt_timer_read();
+ 	while(1) {
+ 		ms_err = ms_update();
+ 		if (ms_err==0) continue; //dont do anything if gyro has no new data; depends on gyro RATE
+
+Index: controller/Makefile
+@@ -2,7 +2,7 @@
+ CXXFLAGS= -Wall -g -O2
+ CXX_OPTS= -Wall -g -O2 $(CXXFLAGS_FOR_BUILD)
+ LDFLAGS=-lpthread -pthread
+-LD_OPTS=-lpthread -lxenomai -lrt -lnative
++LD_OPTS=-lpthread # -lxenomai -lrt -lnative
+ 
+ PROG=controller

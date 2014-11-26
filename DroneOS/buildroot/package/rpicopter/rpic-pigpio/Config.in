@@ -1,0 +1,5 @@
+config BR2_PACKAGE_RPIC_PIGPIO
+	bool "rpic-pigpio"
+	help
+	  Adds pigpio package
+	  https://github.com/rpicopter/pigpio
